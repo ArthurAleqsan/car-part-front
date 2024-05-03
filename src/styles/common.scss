@@ -1,0 +1,263 @@
+@import "./colors.scss";
+@import "./mixins.scss";
+
+#__next {
+  min-width: 375px;
+  height: 100%;
+}
+
+.img-cover {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.img-contain {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.tippy-popper {
+  .tippy-tooltip {
+    .tippy-tooltip-content {
+      position: inherit;
+      width: 187px;
+      min-height: 52px;
+      border-radius: 4px;
+      background-color: $black;
+      color: $white;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 130%;
+      padding: 10px 16px;
+    }
+  }
+}
+
+.flexible {
+  display: flex;
+
+  &.horizontal {
+    flex-direction: row;
+  }
+
+  &.vertical {
+    flex-direction: column;
+  }
+
+  &.vertical-reverse {
+    flex-direction: column-reverse;
+  }
+
+  &.jStart {
+    justify-content: flex-start;
+  }
+
+  &.jEnd {
+    justify-content: flex-end;
+  }
+
+  &.jCenter {
+    justify-content: center;
+  }
+
+  &.jAround {
+    justify-content: space-around;
+  }
+
+  &.jBetween {
+    justify-content: space-between;
+  }
+
+  &.aStart {
+    align-items: flex-start;
+  }
+
+  &.aEnd {
+    align-items: flex-end;
+  }
+
+  &.aCenter {
+    align-items: center;
+  }
+
+  &.wrap {
+    flex-wrap: wrap;
+  }
+
+  &.noWrap {
+    flex-wrap: nowrap;
+  }
+
+  &.grow {
+    flex-grow: 1;
+  }
+
+  &.noGrow {
+    flex-grow: 0;
+  }
+
+  &.shrink {
+    flex-shrink: 1;
+  }
+
+  &.noShrink {
+    flex-shrink: 0;
+  }
+  &.pAbsolute {
+    position: absolute;
+  }
+}
+.primaryBtn {
+  background-color: $primary;
+  color: #fff;
+  border: 1px solid $primary;
+  box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.043);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-transform: capitalize;
+  &:hover {
+    color: #fff !important;
+    background-color: $primary !important;
+  }
+  .primaryBtn-icon {
+    color: #fff;
+  }
+  &.disabled-button {
+    &:hover {
+      color: unset !important;
+      background-color: unset !important;
+    }
+    .primaryBtn-icon {
+      color: unset;
+    }
+  }
+}
+.secondaryBtn {
+  background-color: transparent;
+  color: #000;
+  border: 1px solid $primary;
+  box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.043);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-transform: capitalize;
+  &:hover {
+    color: $primary !important;
+    border: 1px solid $primary !important;
+  }
+  .secondaryBtn-icon {
+    color: $primary;
+  }
+  &.disabled-button {
+    &:hover {
+      color: unset !important;
+      background-color: unset !important;
+    }
+    .secondaryBtn-icon {
+      color: unset;
+    }
+  }
+}
+.default-button {
+  box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.043);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-transform: capitalize;
+}
+
+.disabledPrimaryBtn {
+  &:hover {
+    color: unset !important;
+    background-color: unset !important;
+  }
+}
+.ant-input:hover,
+.ant-input:focus,
+.ant-input-affix-wrapper:hover,
+.ant-input-affix-wrapper:focus,
+.ant-select-selector:hover,
+.ant-select-selector:focus {
+  border-color: $primary !important;
+  border-inline-end-width: 1px;
+}
+.ant-menu-item-selected {
+  background-color: rgba(176, 197, 195, 0.5) !important;
+  width: 100%;
+  border-radius: unset;
+  /* ink/theme→3px */
+
+  box-shadow: inset -3px 0px 0px #4b7b75;
+  color: #4b7b75 !important;
+}
+.ant-menu-submenu-selected > .ant-menu-submenu-title {
+  color: $primary !important;
+}
+
+.tableLink {
+  color: #1890ff;
+  &:hover {
+    color: #1890ff;
+  }
+}
+.input_row {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 8px;
+}
+.group_row {
+  display: flex;
+  margin-bottom: 8px;
+  border: 1px solid #ebebeb;
+  border-radius: 8px;
+  padding: 8px;
+}
+.mg-2 {
+  margin: 2px;
+}
+.required {
+  color: red;
+}
+.fAlignEnd {
+  align-items: flex-end;
+}
+.loader {
+  height: 100vh;
+  @include center();
+}
+.box {
+  border: 1px solid #ebebeb;
+  padding: 15px;
+  margin-bottom: 5px;
+}
+.box_button {
+  border: 1px solid #ebebeb;
+  padding: 4px 15px;
+}
+.thumbnailModal {
+  .ant-modal-content {
+    width: 100%;
+    height: 400px;
+    flex-direction: column;
+    @include center();
+  }
+}
+.ant-table-tbody {
+  .ant-table-row {
+    background: #ffffff;
+    &:nth-child(2n) {
+      background: #ebebeb;
+    }
+  }
+}
+.ant-table-cell-row-hover {
+  background: #d5e0df!important;
+}
